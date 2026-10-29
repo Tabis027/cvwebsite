@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ตาบิส จันดี – ประวัติส่วนตัว (CV)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Serif+Thai:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfbfc;--paper:#ffffff;--ink:#1c2430;--muted:#667085;--line:#e3e6eb;--accent:#1f3a5f;--chip:#eef1f6;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#12161c;--paper:#181d25;--ink:#e9ecf1;--muted:#9aa4b2;--line:#2a313b;--accent:#9db8e6;--chip:#202732;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#12161c;--paper:#181d25;--ink:#e9ecf1;--muted:#9aa4b2;--line:#2a313b;--accent:#9db8e6;--chip:#202732;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Thai",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover,a:focus-visible{color:var(--accent);border-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sheet{max-width:1000px;margin:40px auto;background:var(--paper);border:1px solid var(--line);display:grid;grid-template-columns:290px 1fr}
+aside{padding:44px 30px;border-right:1px solid var(--line)}
+.photo{width:100%;aspect-ratio:3/4;background:var(--chip);border:1px solid var(--line);position:relative;overflow:hidden;cursor:pointer;display:block;padding:0}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .hint{position:absolute;inset:auto 0 0 0;background:rgba(20,28,40,.72);color:#fff;font-size:.78rem;text-align:center;padding:5px;opacity:0;transition:opacity .2s}
+.photo:hover .hint,.photo:focus-visible .hint{opacity:1}
+h1{font-family:"Noto Serif Thai",serif;font-size:1.65rem;line-height:1.35;font-weight:600;margin:26px 0 4px;color:var(--ink)}
+.role{color:var(--accent);font-weight:500;margin:0 0 26px}
+.side h3{font-size:.95rem;font-weight:600;margin:26px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line);color:var(--accent)}
+.side ul{list-style:none;margin:0;padding:0;font-size:.9rem}
+.side li{margin-bottom:6px;overflow-wrap:anywhere}
+.side small{display:block;color:var(--muted);font-size:.78rem;line-height:1.4}
+.theme{margin-top:28px;background:none;border:1px solid var(--line);color:var(--muted);font:inherit;font-size:.82rem;padding:5px 14px;border-radius:999px;cursor:pointer}
+.theme:hover{color:var(--ink)}
+main{padding:44px 44px 56px}
+section{margin-bottom:38px}
+h2{font-family:"Noto Serif Thai",serif;font-size:1.15rem;font-weight:600;margin:0 0 18px;padding-bottom:8px;border-bottom:2px solid var(--accent);color:var(--accent)}
+.summary{margin:0;font-size:.97rem}
+.item{display:grid;grid-template-columns:120px 1fr;gap:20px;margin-bottom:22px}
+.when{color:var(--muted);font-size:.86rem;padding-top:3px}
+.item h3{font-size:1rem;font-weight:600;margin:0}
+.org{color:var(--muted);font-size:.9rem;margin:0 0 4px}
+.item p{margin:0;font-size:.94rem}
+.item ul{margin:4px 0 0;padding-left:18px;font-size:.94rem}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skills span{background:var(--chip);padding:3px 13px;border-radius:3px;font-size:.88rem}
+.bars{display:grid;grid-template-columns:1fr 1fr;gap:10px 32px;font-size:.92rem}
+.bars div{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding-bottom:3px}
+.bars em{font-style:normal;color:var(--muted)}
+.refs{display:grid;grid-template-columns:1fr 1fr;gap:24px;font-size:.92rem}
+.refs p{margin:0}.refs small{color:var(--muted)}
+@media (max-width:800px){
+  .sheet{grid-template-columns:1fr;margin:0;border:0}
+  aside{border-right:0;border-bottom:1px solid var(--line);padding:32px 22px}
+  .photo{max-width:200px}
+  main{padding:32px 22px 44px}
+  .item,.bars,.refs{grid-template-columns:1fr}
+  .item{gap:2px}
+}
+@media print{.theme{display:none}.sheet{border:0;margin:0}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <aside class="side">
+    <button class="photo" id="photo" type="button" aria-label="เลือกรูปโปรไฟล์">
+      <img id="img" alt="รูปโปรไฟล์" src="https://s.imgz.io/2026/10/29/temp_image_61DD4CDF-6026-44E0-9846-DF22C229F102234d2a06c92c8c1f.png">
+    </button>
+    <input type="file" id="file" accept="image/*" hidden>
+    <h1>ตาบิส จันดี</h1>
+    <p class="role">นักศึกษาแผนกเทคโนโลยีสารสนเทศ</p>
+    
+    <h3>ข้อมูลติดต่อ</h3>
+    <ul>
+      <li><small>อีเมล</small><a href="mailto:68219010027@kbtc.ac.th">68219010027@kbtc.ac.th</a></li>
+      <li><small>โทรศัพท์</small>098-437-4336</li>
+      <li><small>ที่อยู่</small>277 ม.1 ต.หนองทะเล อ.เมืองกระบี่ จ.กระบี่ 81000</li>
+      <li><small>instagram</small><a href="#">instagram.com/mribxs_.y</a></li>
+      <li><small>เว็บไซต์ผลงาน</small><a href="#">https://github.com/Tabis027</a></li>
+    </ul>
+
+    <h3>ข้อมูลส่วนตัว</h3>
+    <ul>
+      <li><small>วันเกิด</small>17 พฤศจิกายน 2552</li>
+      <li><small>สัญชาติ</small>ไทย</li>
+    </ul>
+    <button class="theme" id="theme" type="button">สลับโหมดมืด/สว่าง</button>
+  </aside>
+
+  <main>
+    <section>
+      <h2>โปรไฟล์</h2>
+      <p class="summary">นักศึกษาแผนกเทคโนโลยีสารสนเทศที่มีความสนใจด้านการพัฒนาเว็บ (Web Development) และการออกแบบ UI/UX มีความเชี่ยวชาญในการใช้ HTML, CSS และ Figma ในการสร้างสรรค์เว็บไซต์และแอปพลิเคชันต้นแบบ มุ่งมั่นที่จะพัฒนาทักษะทางเทคโนโลยีไอทีเพื่อนำมาประยุกต์ใช้ในการแก้ปัญหาจริงอย่างมีประสิทธิภาพ</p>
+    </section>
+
+    <section>
+      <h2>ประสบการณ์ทำงาน & โครงการ</h2>
+      <div class="item">
+        <div class="when">2568 – ปัจจุบัน</div>
+        <div>
+          <h3>ผู้ช่วยดูแลระบบไอทีและเว็บไซต์ (งานพาร์ตไทม์)</h3>
+          <p class="org">ร้านค้าและธุรกิจชุมชน · กระบี่</p>
+          <ul>
+            <li>พัฒนานำเสนอเว็บไซต์หน้าเดียว (Landing Page) ด้วย HTML/CSS เพื่อประชาสัมพันธ์สินค้าชุมชน</li>
+            <li>ช่วยดูแลและแก้ไขปัญหาเบื้องต้นเกี่ยวกับฮาร์ดแวร์และระบบเครือข่ายภายในร้านค้า</li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <div class="when">2567 – 2568</div>
+        <div>
+          <h3>นักออกแบบสื่อดิจิทัลและเว็บไซต์ (ฟรีแลนซ์)</h3>
+          <p class="org">รับงานอิสระ</p>
+          <ul>
+            <li>ออกแบบโครงร่างหน้าเว็บ (Wireframe) และ Prototype โดยใช้ Figma สำหรับโครงการนักเรียน</li>
+            <li>ออกแบบสื่อประชาสัมพันธ์ดิจิทัลและกราฟิกสำหรับกิจกรรมโรงเรียน</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>การศึกษา</h2>
+      <div class="item">
+        <div class="when">2568 – 2569</div>
+        <div>
+          <h3>ปวช. สาขาเทคโนโลยีสารสนเทศ</h3>
+          <p class="org">วิทยาลัยเทคนิคกระบี่ · เกรดเฉลี่ย 3.42</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="when">2565 – 2567</div>
+        <div>
+          <h3>มัธยมศึกษาปีที่ 1-3</h3>
+          <p class="org">โรงเรียนหนองทะเลวิทยา · เกรดเฉลี่ย 3.52</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>ทักษะ</h2>
+      <div class="skills">
+        <span>HTML5 / CSS3</span>
+        <span>JavaScript เบื้องต้น</span>
+        <span>Figma</span>
+        <span>UI/UX Design</span>
+        <span>Wireframing</span>
+        <span>Git / GitHub</span>
+        <span>Computer Hardware</span>
+        <span>Microsoft Office</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>ภาษา</h2>
+      <div class="bars">
+        <div>ไทย <em>ภาษาแม่</em></div>
+        <div>อังกฤษ <em>การสื่อสารและอ่านเอกสารไอทีเบื้องต้น</em></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>การฝึกอบรมและใบรับรอง</h2>
+      <div class="item">
+        <div class="when">2567</div>
+        <div>
+          <h3>Google UX Design Certificate</h3>
+          <p class="org">Coursera</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="when">2567</div>
+        <div>
+          <h3>Responsive Web Design Certificate</h3>
+          <p class="org">freeCodeCamp</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>ผลงานและรางวัล</h2>
+      <div class="item">
+        <div class="when">2568</div>
+        <div>
+          <h3><a href="https://github.com/Tabis027">เว็บไซต์ CV ประวัติส่วนตัว (Responsive)</a></h3>
+          <p>ออกแบบและเขียนโค้ดด้วย HTML และ CSS รองรับการแสดงผลทั้งมือถือและคอมพิวเตอร์</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="when">2567</div>
+        <div>
+          <h3>โครงการออกแบบต้นแบบแอปพลิเคชันตารางเรียน</h3>
+          <p class="org">วิทยาลัยเทคนิคกระบี่</p>
+          <p>วางโครงสร้าง UX และออกแบบอินเทอร์เฟซ (UI) ด้วย Figma เพื่อช่วยให้นักเรียนติดตามตารางเรียนได้ง่ายขึ้น</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>กิจกรรมและงานอาสา</h2>
+      <div class="item">
+        <div class="when">2568 – ปัจจุบัน</div>
+        <div>
+          <h3>สมาชิกชมรมคอมพิวเตอร์และเทคโนโลยี</h3>
+          <p>ช่วยซ่อมบำรุงและดูแลห้องปฏิบัติการคอมพิวเตอร์ของแผนกวิชาไอที</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>บุคคลอ้างอิง</h2>
+      <div class="refs">
+        <p><strong>อ.พิเชษฐ์ สายเส็น</strong><br><small>อาจารย์ที่ปรึกษา, วิทยาลัยเทคนิคกระบี่<br>pichet@kbtc.ac.th</small></p>
+      </div>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>
